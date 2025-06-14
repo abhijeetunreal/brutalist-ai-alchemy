@@ -6,11 +6,8 @@ import AIPlayground from '../components/AIPlayground';
 import Contact from '../components/Contact';
 
 const Index = () => {
-  return (
-    <div className="bg-brutal-black text-brutal-white overflow-x-hidden">
-      {/* Console Easter Egg */}
-      <div className="hidden">
-        {console.log(`
+  // Console Easter Egg - moved outside JSX
+  console.log(`
 %c╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                   ║
 ║    ██████╗ ██████╗ ██╗   ██╗████████╗ █████╗ ██╗     ██╗███████╗████████╗    ██████╗ ███████╗███████╗██╗ ██████╗ ███╗   ██╗    ║
@@ -30,9 +27,10 @@ const Index = () => {
 ║    Email: abhijeet@brutaldesign.dev                                                                              ║
 ║                                                                                                                   ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-        `, 'color: #00FFFF; font-family: monospace;')}
-      </div>
+        `, 'color: #00FFFF; font-family: monospace;');
 
+  return (
+    <div className="bg-brutal-black text-brutal-white overflow-x-hidden">
       <Hero />
       <About />
       <CaseStudies />
