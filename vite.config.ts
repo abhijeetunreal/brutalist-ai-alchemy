@@ -6,7 +6,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/brutalist-ai-alchemy/', // Replace with your actual repo name
+  base: './', // Use relative paths for static deployment
   server: {
     port: 8080
   },
@@ -16,6 +16,12 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   }
 })
