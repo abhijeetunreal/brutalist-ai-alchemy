@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: '/brutalist-ai-alchemy/', // Replace 'your-repo-name' with actual repo name
+  base: '/brutalist-ai-alchemy/', // Replace with your actual repo name
   build: {
     outDir: 'dist'
   }
